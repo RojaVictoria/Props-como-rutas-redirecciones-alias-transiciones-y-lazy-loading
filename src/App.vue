@@ -13,7 +13,9 @@
         </div>
         </div>
     </nav>
-    <router-view></router-view>
+    <transition name="transition">
+      <router-view></router-view>
+    </transition>
   </div>
   
 </template>
@@ -34,4 +36,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.transition-enter-active, .transition-leave-active {
+transition: opacity .1s,
+}
+.transition-enter, .transition-leave-to{
+opacity: 0;
+}
+
 </style>
